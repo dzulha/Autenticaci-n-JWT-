@@ -1,12 +1,39 @@
-# React + Vite
+# Autenticación JWT con Flask y React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto del bootcamp de 4grrks implementa un sistema completo de **autenticación de usuarios** combinando **Flask (Python)** para el backend y **React.js** para el frontend.  
+El flujo de autenticación se maneja con **JSON Web Tokens (JWT)** y el almacenamiento de sesión en el **SessionStorage API** del navegador.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características principales
 
-## Expanding the ESLint configuration
+- **Registro de usuario**: creación de cuenta con email y contraseña.
+- **Inicio de sesión**: autenticación contra la base de datos y generación de token JWT.
+- **Protección de rutas**: las páginas privadas solo son accesibles si el token es válido.
+- **Cierre de sesión**: eliminación del token del SessionStorage y redirección al login.
+- **Validación automática**: verificación de sesión activa en cada carga de componente privado.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías utilizadas
+
+### Backend (Flask)
+- Flask
+- Flask-SQLAlchemy
+- Flask-Migrate
+- Flask-Bcrypt
+- Flask-JWT-Extended
+- Flask-CORS
+- Python Dotenv (manejo de variables de entorno)
+
+### Frontend (React.js)
+- React Router
+- SessionStorage API
+- Bootstrap 5
+- Fetch API para comunicación con el backend
+
+### Base de datos
+- SQLite (por defecto)
+- PostgreSQL (opcional, configurable vía `.env`)
+
+---
